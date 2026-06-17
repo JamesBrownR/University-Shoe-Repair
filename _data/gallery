@@ -1,0 +1,52 @@
+# Gallery images for University Shoe Repair & Alterations
+# Files live in /images/ folder and follow the USR#.webp naming format.
+# Add new entries here — the gallery pages pick them up automatically.
+# Fields: src (filename only), caption, featured (true = shown in homepage preview grid)
+
+- src: "USR1.webp"
+  caption: "Designer heel restoration — before and after"
+  featured: true
+
+- src: "USR2.webp"
+  caption: "Leather shoe recondition and resole"
+  featured: true
+
+- src: "USR3.webp"
+  caption: "Custom belt crafted in-house"
+  featured: true
+
+- src: "USR4.webp"
+  caption: "Handbag repair and color restoration"
+  featured: true
+
+- src: "USR5.webp"
+  caption: "Western boot rebuild"
+  featured: true
+
+- src: "USR6.webp"
+  caption: "Sneaker restoration and cleaning"
+  featured: true
+
+- src: "USR7.webp"
+  caption: "Zipper replacement on leather jacket"
+  featured: false
+
+- src: "USR8.webp"
+  caption: "Sole replacement — men's dress shoes"
+  featured: false
+
+- src: "USR9.webp"
+  caption: "Luxury handbag lining replacement"
+  featured: false
+
+- src: "USR10.webp"
+  caption: "Bridal gown alteration"
+  featured: false
+
+- src: "USR11.webp"
+  caption: "Orthopedic shoe modification"
+  featured: false
+
+- src: "USR12.webp"
+  caption: "Belt repair and hardware replacement"
+  featured: false
