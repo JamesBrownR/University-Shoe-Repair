@@ -1,0 +1,10 @@
+# Reviews for University Shoe Repair & Alterations
+# Add new entries here — the site picks them up automatically.
+# Fields: author, source (Google | Yelp | Facebook), rating (1-5), date, text, featured (true = shown on homepage)
+
+- author: "Charles S."
+  source: "Google"
+  rating: 5
+  date: "2024-11-10"
+  text: "Great service and prices and more importantly the work is done properly and when they said it would be done."
+  featured: true
