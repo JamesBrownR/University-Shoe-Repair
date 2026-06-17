@@ -1,1 +1,62 @@
+title: "University Shoe Repair & Alterations"
+tagline: "South Florida's #1 Shoe Repair & Alterations"
+description: "Expert shoe repair, leather restoration, and alterations in Tamarac, FL. Serving South Florida since 1990. Family-owned and operated."
+url: ""
+baseurl: ""
 
+# Business info
+business:
+  name: "University Shoe Repair & Alterations"
+  short_name: "University Shoe Repair"
+  established: 1990
+  phone: "(954) 722-1109"
+  phone_raw: "9547221109"
+  email: "ushoerepair@gmail.com"
+  address: "6422 N University Dr"
+  city: "Tamarac"
+  state: "FL"
+  zip: "33321"
+  full_address: "6422 N University Dr, Tamarac, FL 33321"
+
+# Social
+social:
+  facebook: "https://www.facebook.com/shoerepairfl"
+  instagram: "https://www.instagram.com/universityshoerepair/"
+  yelp: "https://www.yelp.com/biz/university-shoe-repair-tamarac"
+
+# Hours
+hours:
+  - day: Monday
+    open: "9 AM"
+    close: "6 PM"
+  - day: Tuesday
+    open: "9 AM"
+    close: "6 PM"
+  - day: Wednesday
+    open: "9 AM"
+    close: "6 PM"
+  - day: Thursday
+    open: "9 AM"
+    close: "6 PM"
+  - day: Friday
+    open: "9 AM"
+    close: "6 PM"
+  - day: Saturday
+    open: "9 AM"
+    close: "4 PM"
+  - day: Sunday
+    open: "Closed"
+    close: ""
+
+# Formspree endpoint (replace YOUR_FORM_ID with real ID)
+formspree_id: "YOUR_FORM_ID"
+
+# Jekyll settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
