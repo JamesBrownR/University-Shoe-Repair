@@ -1,1 +1,95 @@
+---
+layout: default
+title: "About Us | University Shoe Repair & Alterations – Tamarac, FL"
+description: "Family-owned since 1990, University Shoe Repair & Alterations has served Tamarac and South Florida for over 35 years. Meet the team behind the craftsmanship."
+page_styles: |
+  .about-page { padding: var(--section-pad); background: var(--off-white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .about-grid img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+  .about-grid h2 { font-family: var(--ff-display); font-size: clamp(1.5rem,2.5vw,2rem); font-weight: 700; color: var(--purple-dark); margin-bottom: 16px; }
+  .about-grid p { color: #555; font-size: 0.9625rem; margin-bottom: 16px; line-height: 1.8; }
+  .about-values { padding: var(--section-pad); background: #fff; }
+  .about-values-head { text-align: center; margin-bottom: 48px; }
+  .about-values-head .section-heading { margin-bottom: 12px; }
+  .about-values-head p { color: #666; max-width: 520px; margin: 0 auto; font-size: 0.95rem; }
+  .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+  .value-card { background: var(--off-white); border-radius: var(--radius-lg); padding: 32px 28px; border-left: 4px solid var(--gold); }
+  .value-card h3 { font-family: var(--ff-display); font-size: 1.1rem; font-weight: 700; color: var(--purple-dark); margin-bottom: 10px; }
+  .value-card p { font-size: 0.875rem; color: #666; line-height: 1.65; }
+  .value-icon { font-size: 2rem; margin-bottom: 14px; line-height: 1; }
+  .about-cta { background: var(--purple-dark); padding: 64px 0; text-align: center; }
+  .about-cta h2 { font-family: var(--ff-display); font-size: clamp(1.5rem,3vw,2.25rem); font-weight: 700; color: #fff; margin-bottom: 14px; }
+  .about-cta p { color: rgba(255,255,255,0.72); font-size: 1rem; margin-bottom: 32px; }
+  .cta-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; gap: 36px; }
+    .values-grid { grid-template-columns: 1fr; }
+  }
+---
 
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Our Story</p>
+    <h1>About University Shoe Repair</h1>
+    <p>Family-owned and operated in Tamarac, FL since 1990. Over 35 years of old world craftsmanship serving South Florida.</p>
+  </div>
+</div>
+
+<!-- ABOUT CONTENT -->
+<section class="about-page" aria-labelledby="about-story-heading">
+  <div class="container about-grid">
+    <div>
+      <img src="/images/USRAbout.webp" alt="Gary at the counter of University Shoe Repair in Tamarac, FL" loading="lazy" />
+    </div>
+    <div>
+      <p class="eyebrow">Who We Are</p>
+      <h2 id="about-story-heading">Craftsmanship Built on 35 Years of Trust</h2>
+      <p>University Shoe Repair was founded in 1990 by Gary, a skilled cobbler who trained in traditional shoemaking before opening his shop on North University Drive in Tamarac. What started as a one-man neighborhood repair shop has grown into South Florida's most trusted destination for shoe repair, leather restoration, and clothing alterations.</p>
+      <p>We are a family-owned and operated business. That means every customer gets treated like a neighbor, every repair gets done right, and you always deal with someone who actually cares about the result. No corporate call centers, no upselling, no surprises on the price.</p>
+      <p>Our team brings together traditional cobbling skills and a professional seamstress on site to cover everything from resoling a worn-out work boot to restoring a Chanel handbag to showroom condition. We work on pieces from Louis Vuitton, Gucci, Prada, and all major luxury brands, as well as everyday footwear and clothing that matters to you.</p>
+      <p>Every job that leaves our shop carries a 100% satisfaction guarantee. If it is not right, we make it right.</p>
+      <a href="/contact/" class="btn btn-gold" style="margin-top:8px;">Get a Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="about-values" aria-labelledby="values-heading">
+  <div class="container">
+    <div class="about-values-head">
+      <p class="eyebrow">What Drives Us</p>
+      <h2 class="section-heading" id="values-heading">The Way We Work</h2>
+      <p>Three things have not changed since 1990: the quality of our work, the honesty of our pricing, and the care we give every customer.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon" aria-hidden="true">🧵</div>
+        <h3>Old World Craftsmanship</h3>
+        <p>We use traditional techniques passed down through decades of shoemaking. Every stitch and sole is set by hand by someone who takes pride in the trade.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon" aria-hidden="true">🤝</div>
+        <h3>Honest, Upfront Pricing</h3>
+        <p>We give you a free estimate before any work starts. No hidden fees, no surprises at pickup. If the price changes for any reason, we call you first.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon" aria-hidden="true">✅</div>
+        <h3>100% Satisfaction Guarantee</h3>
+        <p>If you are not completely happy with the result, bring it back and we will fix it. No questions, no excuses. That guarantee has been our standard since day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta" aria-label="Call to action">
+  <div class="container">
+    <h2>Ready to Bring Your Shoes or Bag Back to Life?</h2>
+    <p>Walk in Monday through Saturday or call ahead for a free estimate. No appointment needed.</p>
+    <div class="cta-actions">
+      <a href="tel:{{ site.business.phone_raw }}" class="btn btn-gold">Call {{ site.business.phone }}</a>
+      <a href="/services/" class="btn btn-outline-white">See All Services</a>
+    </div>
+  </div>
+</section>
