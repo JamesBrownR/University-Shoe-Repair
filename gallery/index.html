@@ -1,1 +1,73 @@
+---
+layout: default
+title: "Gallery | University Shoe Repair & Alterations – Tamarac, FL"
+description: "See before and after photos of shoe repairs, leather restorations, handbag repairs, and alterations from University Shoe Repair in Tamarac, FL."
+page_styles: |
+  .gallery-page { padding: var(--section-pad); background: var(--purple-dark); }
+  .gallery-page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .gallery-page-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    aspect-ratio: 4/3;
+    cursor: pointer;
+  }
+  .gallery-page-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+  .gallery-page-item:hover img { transform: scale(1.06); }
+  .gallery-page-item-caption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(29,14,80,0.88));
+    color: rgba(255,255,255,0.9);
+    font-size: 0.8rem;
+    padding: 28px 14px 14px;
+    transform: translateY(100%);
+    transition: transform 0.25s;
+  }
+  .gallery-page-item:hover .gallery-page-item-caption { transform: translateY(0); }
+  .gallery-cta { background: var(--off-white); padding: 56px 0; text-align: center; }
+  .gallery-cta h2 { font-family: var(--ff-display); font-size: clamp(1.4rem,2.5vw,2rem); font-weight: 700; color: var(--purple-dark); margin-bottom: 12px; }
+  .gallery-cta p { color: #666; font-size: 0.95rem; margin-bottom: 28px; }
+  @media (max-width: 768px) { .gallery-page-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 480px)  { .gallery-page-grid { grid-template-columns: 1fr; } }
+---
 
+<div class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Our Work</p>
+    <h1>Repair &amp; Restoration Gallery</h1>
+    <p>A look at some of the work that leaves our Tamarac shop. From everyday repairs to luxury restorations.</p>
+  </div>
+</div>
+
+<section class="gallery-page" aria-labelledby="gallery-page-heading">
+  <div class="container">
+    <div class="gallery-page-grid">
+      {% for item in site.data.gallery %}
+      <div class="gallery-page-item">
+        <img
+          src="{{ site.baseurl }}/images/{{ item.src }}"
+          alt="{{ item.caption }} – University Shoe Repair Tamarac FL"
+          loading="lazy"
+        />
+        <div class="gallery-page-item-caption">{{ item.caption }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="gallery-cta" aria-label="Gallery CTA">
+  <div class="container">
+    <h2>Ready to Restore Your Shoes or Bag?</h2>
+    <p>Walk in Monday through Saturday — no appointment needed. Free estimates on everything.</p>
+    <a href="tel:{{ site.business.phone_raw }}" class="btn btn-gold">Call {{ site.business.phone }}</a>
+  </div>
+</section>
