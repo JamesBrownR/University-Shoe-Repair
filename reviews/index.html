@@ -1,1 +1,78 @@
+---
+layout: default
+title: "Customer Reviews | University Shoe Repair & Alterations – Tamarac, FL"
+description: "Read verified customer reviews for University Shoe Repair in Tamarac, FL. Rated 5 stars on Google and Yelp. See what South Florida customers say about us."
+page_styles: |
+  .reviews-page { padding: var(--section-pad); background: var(--off-white); }
+  .reviews-page-head { text-align: center; margin-bottom: 52px; }
+  .reviews-page-head .section-heading { margin-bottom: 10px; }
+  .avg-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--purple-dark); color: var(--gold); border-radius: 100px; padding: 8px 20px; font-size: 0.85rem; font-weight: 600; margin-top: 14px; }
+  .reviews-all-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .review-card { background: #fff; border-radius: var(--radius-lg); padding: 28px 24px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 14px; }
+  .review-card blockquote { font-size: 0.925rem; color: #444; line-height: 1.7; font-style: italic; flex: 1; }
+  .review-card blockquote::before { content: '\201C'; font-family: var(--ff-display); font-size: 2.5rem; color: var(--gold); line-height: 0.6; display: block; margin-bottom: 8px; }
+  .review-meta { display: flex; align-items: center; justify-content: space-between; }
+  .review-author { font-weight: 600; font-size: 0.875rem; color: var(--purple-dark); }
+  .review-date { font-size: 0.75rem; color: var(--mid-gray); margin-top: 2px; }
+  .review-source { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid-gray); }
+  .reviews-cta { background: var(--purple-dark); padding: 56px 0; text-align: center; }
+  .reviews-cta h2 { font-family: var(--ff-display); font-size: clamp(1.4rem,2.5vw,2rem); font-weight: 700; color: #fff; margin-bottom: 12px; }
+  .reviews-cta p { color: rgba(255,255,255,0.72); font-size: 0.95rem; margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .reviews-cta-links { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+  @media (max-width: 900px) { .reviews-all-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 600px) { .reviews-all-grid { grid-template-columns: 1fr; } }
+---
 
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <p class="eyebrow">What Customers Say</p>
+    <h1>Reviews for University Shoe Repair</h1>
+    <p>Rated 5 stars on Google and Yelp by customers across Tamarac and South Florida.</p>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section class="reviews-page" aria-labelledby="reviews-page-heading">
+  <div class="container">
+    <div class="reviews-page-head">
+      <p class="eyebrow">Customer Reviews</p>
+      <h2 class="section-heading" id="reviews-page-heading">What Our Customers Say</h2>
+      <div class="avg-badge">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        Rated 5.0 on Google &amp; Yelp
+      </div>
+    </div>
+
+    <div class="reviews-all-grid">
+      {% for review in site.data.reviews %}
+      <article class="review-card">
+        <blockquote>{{ review.text }}</blockquote>
+        <div class="review-meta">
+          <div>
+            <div class="review-author">{{ review.author }}</div>
+            <div class="stars" aria-label="{{ review.rating }} stars">
+              {% assign i = 1 %}
+              {% for star in (1..review.rating) %}&#9733;{% endfor %}
+            </div>
+            {% if review.date %}<div class="review-date">{{ review.date | date: "%B %Y" }}</div>{% endif %}
+          </div>
+          <div class="review-source">{{ review.source }} Review</div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW CTA -->
+<section class="reviews-cta" aria-label="Leave a review">
+  <div class="container">
+    <h2>Happy with Your Repair? Leave Us a Review</h2>
+    <p>Your feedback helps other South Florida customers find us and helps us keep improving.</p>
+    <div class="reviews-cta-links">
+      <a href="https://www.google.com/maps/place/University+Shoe+Repair" class="btn btn-gold" rel="noopener" target="_blank">Review on Google</a>
+      <a href="{{ site.social.yelp }}" class="btn btn-outline-white" rel="noopener" target="_blank">Review on Yelp</a>
+    </div>
+  </div>
+</section>
