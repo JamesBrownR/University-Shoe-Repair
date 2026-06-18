@@ -1,1 +1,31 @@
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce-bar">
+  Walk-ins welcome! Call us at <a href="tel:{{ site.business.phone_raw }}">{{ site.business.phone }}</a> or stop in at {{ site.business.full_address }}.
+</div>
 
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container navbar-inner">
+
+    <a href="/" class="navbar-logo" aria-label="{{ site.business.name }} Home">
+      <img src="/images/USRLogo.webp" alt="{{ site.business.name }} Logo" />
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/gallery/">Gallery</a></li>
+      <li><a href="/reviews/">Reviews</a></li>
+      <li><a href="/service-areas/">Service Areas</a></li>
+      <li><a href="/about-us/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+
+    <a href="tel:{{ site.business.phone_raw }}" class="nav-phone" aria-label="Call us at {{ site.business.phone }}">{{ site.business.phone }}</a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
