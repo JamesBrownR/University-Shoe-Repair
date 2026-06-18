@@ -51,6 +51,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   {% include css.html %}
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" />
+<!-- ADD THIS LINE after the fonts: -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 </head>
 
 <body>
@@ -77,6 +81,8 @@
       link.classList.toggle('active', link.getAttribute('href') === currentPath);
     });
   </script>
-
+<script>
+  if (window.lucide) lucide.createIcons();
+</script>
 </body>
 </html>
