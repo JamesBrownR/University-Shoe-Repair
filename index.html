@@ -197,7 +197,7 @@ description: "University Shoe Repair in Tamarac, FL offers expert shoe repair, l
       </div>
 
 <div class="reviews-grid">
-  {% assign featured = site.data.reviews.reviews | where: "featured", true | where_exp: "r", "r.text != ''" | limit: 6 %}
+  {% assign featured = site.data.reviews | where: "featured", true | where_exp: "r", "r.text != ''" | limit: 6 %}
   {% for review in featured %}
   <article class="review-card">
     <blockquote>{{ review.text }}</blockquote>
