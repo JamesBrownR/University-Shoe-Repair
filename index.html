@@ -220,31 +220,78 @@ description: "University Shoe Repair in Tamarac, FL offers expert shoe repair, l
 
 <!-- REVIEWS -->
   <section class="reviews" aria-labelledby="reviews-heading">
-    <div class="container">
-      <div class="reviews-head">
-        <p class="eyebrow">Customer Reviews</p>
-        <h2 class="section-heading" id="reviews-heading">What Our Customers Say</h2>
-        <div class="avg">
-          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          Rated 5.0 on Google &amp; Yelp
-        </div>
-      </div>
-<div class="reviews-grid">
-  {% assign featured = site.data.reviews | where: "featured", true | where_exp: "r", "r.text != ''" | limit: 6 %}
-  {% for review in featured %}
+   <div class="reviews-grid">
+  <!-- Review 1 -->
   <article class="review-card">
-    <blockquote>{{ review.text }}</blockquote>
+    <blockquote>I miss the old days of having a shoe shine guy in almost every hotel and airport. My shoes were immaculate back then. But since those days are long gone, I have some really nice shoes that have been badly neglected. I brought 5 pair of dress shoes and 1 pair of sneakers to get freshened up. They really didn't need to be repaired, just brought back to life. I dropped them off, picked them up a few days later. They were like brand new. Strongly recommend this place.</blockquote>
     <div class="review-meta">
       <div>
-        <div class="review-author">{{ review.author }}</div>
-        <div class="stars" aria-hidden="true">
-          {% for i in (1..review.rating) %}&#9733;{% endfor %}
-        </div>
+        <div class="review-author">Jeremy Mullings</div>
+        <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       </div>
-      <div class="review-source">{{ review.source }}</div>
+      <div class="review-source">Google Review</div>
     </div>
   </article>
-  {% endfor %}
+
+  <!-- Review 2 -->
+  <article class="review-card">
+    <blockquote>Very friendly business and reasonable prices! I took an expensive leather handbag in to have a bottom seam repaired as the threads had broken. Also appreciated the fact he was opened on Mondays. Coral Springs lost my business. I'll make the drive again when I need any type of leather repair, whether it's shoes or my expensive purses. I recommend giving University Shoe Repair your business.</blockquote>
+    <div class="review-meta">
+      <div>
+        <div class="review-author">Lynn Grant Salgado</div>
+        <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
+      <div class="review-source">Google Review</div>
+    </div>
+  </article>
+
+  <!-- Review 3 -->
+  <article class="review-card">
+    <blockquote>They squeezed me in last minute 1.5 days before my flight and did an excellent job replacing the heel to my boots. I included pictures of ny heels and they look identical to the old pair!</blockquote>
+    <div class="review-meta">
+      <div>
+        <div class="review-author">NIKKI STAHR</div>
+        <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
+      <div class="review-source">Google Review</div>
+    </div>
+  </article>
+
+  <!-- Review 4 -->
+  <article class="review-card">
+    <blockquote>University Shoes repair is the best! I have my Gucci sandals for over 10yrs I think. It was worn and damage, I was going to throw them out but then I decided to fix them. Look it looks brand new. They totally refurbished it lol. Its beautiful 😍. I am so pleased with their work. They saved me from buying a new Gucci sandals! I TOTALLY RECOMMEND! They will save you money.</blockquote>
+    <div class="review-meta">
+      <div>
+        <div class="review-author">Marshalee Mohammed</div>
+        <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
+      <div class="review-source">Google Review</div>
+    </div>
+  </article>
+
+  <!-- Review 5 -->
+  <article class="review-card">
+    <blockquote>I’ve had such a great experience here! The owner is amazing — so kind, professional, and really skilled. He fixes every purse I bring to him, His work is high quality, fast, and very reasonably priced. I truly appreciate how much care he puts into every repair. Highly recommend this place for anyone needing purse repairs, shoes and everything!? — the best service ever!</blockquote>
+    <div class="review-meta">
+      <div>
+        <div class="review-author">Majd Mashhur</div>
+        <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
+      <div class="review-source">Google Review</div>
+    </div>
+  </article>
+
+  <!-- Review 6 -->
+  <article class="review-card">
+    <blockquote>My dog chew one of my mother's gucci shoes tongue, I had to fix it or pay her back or buy a new $800 gucci shoes, I have been working with Gary for other shoes repairs and I trusted him to do this job and he did a great job here. both looks the same now. I can return this to my mother and she will not even notice what happened. thank you Gary.</blockquote>
+    <div class="review-meta">
+      <div>
+        <div class="review-author">Walner P</div>
+        <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
+      <div class="review-source">Google Review</div>
+    </div>
+  </article>
 </div>
     
       <div class="reviews-footer">
